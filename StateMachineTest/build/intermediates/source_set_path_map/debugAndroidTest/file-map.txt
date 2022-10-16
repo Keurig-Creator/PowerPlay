@@ -1,0 +1,7 @@
+org.example.test.StateMachineTest-androidTest-0 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\build\generated\res\resValues\androidTest\debug
+org.example.test.StateMachineTest-androidTest-1 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\build\generated\res\rs\androidTest\debug
+org.example.test.StateMachineTest-mergeDebugAndroidTestResources-2 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+org.example.test.StateMachineTest-mergeDebugAndroidTestResources-3 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+org.example.test.StateMachineTest-merged_res-4 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\build\intermediates\merged_res\debugAndroidTest
+org.example.test.StateMachineTest-androidTest-5 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\src\androidTest\res
+org.example.test.StateMachineTest-androidTestDebug-6 C:\Users\FTC\Desktop\FTC\2023\StateMachineTest\src\androidTestDebug\res

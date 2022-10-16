@@ -1,0 +1,7 @@
+include ':FtcRobotController'
+include ':TeamCode'
+include 'MeepMeepTesting'
+include 'TeamCode:FiniteStateMachine'
+findProject(':TeamCode:FiniteStateMachine')?.name = 'FiniteStateMachine'
+include 'StateMachineTest'
+
