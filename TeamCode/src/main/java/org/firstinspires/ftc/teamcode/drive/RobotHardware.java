@@ -3,7 +3,8 @@ package org.firstinspires.ftc.teamcode.drive;
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.*;
-import org.firstinspires.ftc.teamcode.linearslide.slide.data.HorizontalSlide;
+import org.firstinspires.ftc.teamcode.linearslide.constants.slide.data.HorizontalSlide;
+import org.firstinspires.ftc.teamcode.linearslide.constants.slide.data.VerticalSlide;
 
 public class RobotHardware extends LinearOpMode {
 
@@ -16,6 +17,7 @@ public class RobotHardware extends LinearOpMode {
     public BNO055IMU imu;
 
     public HorizontalSlide horizontalSlide;
+    public VerticalSlide verticalSlide;
 
     public void init(HardwareMap hardwareMap) {
 
@@ -23,6 +25,8 @@ public class RobotHardware extends LinearOpMode {
 //        initIMU();
 
         horizontalSlide = new HorizontalSlide(hardwareMap);
+        verticalSlide = new VerticalSlide(hardwareMap);
+        
     }
 
     private void initDrive() {

@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 
 TeamCode-debug.apk
+TeamCode/build
+FtcRobotController/build
+.gradle
