@@ -1,6 +1,10 @@
 package org.firstinspires.ftc.teamcode.pid;
 
 import com.acmerobotics.roadrunner.control.PIDCoefficients;
+import com.acmerobotics.roadrunner.control.PIDFController;
+import com.acmerobotics.roadrunner.profile.MotionProfile;
+import com.acmerobotics.roadrunner.profile.MotionProfileGenerator;
+import com.acmerobotics.roadrunner.profile.MotionState;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
@@ -8,7 +12,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * PID Controller
  */
 public class PIDWrapper {
-    private PIDCoefficients coefficients;
+    public PIDCoefficients coefficients;
+
+    private MotionProfile profile;
     private double integralSum = 0;
     private double lastError = 0;
 
@@ -22,6 +28,11 @@ public class PIDWrapper {
 
     private ElapsedTime timer = new ElapsedTime();
 
+    // specify coefficients/gains
+    PIDCoefficients coeffs = new PIDCoefficients(0.08, 0, 0.00007);
+    // create the controller
+    PIDFController controller = new PIDFController(coeffs);
+
     public PIDWrapper() {
         this(null);
     }
@@ -33,6 +44,13 @@ public class PIDWrapper {
     public PIDWrapper(DcMotorEx motor, PIDCoefficients coefficients) {
         this.coefficients = coefficients;
         this.motor = motor;
+        MotionProfileGenerator.generateSimpleMotionProfile(
+                new MotionState(0, 0, 0),
+                new MotionState(0, 0, 0),
+                25,
+                40,
+                100
+        );
     }
 
     public void update() {
@@ -64,6 +82,26 @@ public class PIDWrapper {
         return output;
     }
 
+    public double getMotion(double feedback) {
+        MotionState state = profile.get(timer.milliseconds());
+
+        controller.setTargetPosition(state.getX());
+        controller.setTargetVelocity(state.getV());
+        controller.setTargetAcceleration(state.getA());
+
+        return controller.update(feedback);
+    }
+
+    public void setPosition(double target, double start) {
+        profile = MotionProfileGenerator.generateSimpleMotionProfile(
+                new MotionState(start, 0, 0),
+                new MotionState(target, 0, 0),
+                25,
+                40,
+                100
+        );
+    }
+
     public void setTargetPosition(int position) {
         setTargetPosition(position, false);
     }
@@ -84,6 +122,10 @@ public class PIDWrapper {
 
     public boolean isBusy() {
         return busy;
+    }
+
+    public PIDCoefficients getCoefficients() {
+        return coefficients;
     }
 
     protected void setCoefficients(PIDCoefficients coefficients) {

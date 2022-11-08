@@ -1,0 +1,7 @@
+org.firstinspires.ftc.teamcode.test.TeamCode-androidTest-0 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\build\generated\res\resValues\androidTest\debug
+org.firstinspires.ftc.teamcode.test.TeamCode-androidTest-1 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\build\generated\res\rs\androidTest\debug
+org.firstinspires.ftc.teamcode.test.TeamCode-mergeDebugAndroidTestResources-2 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+org.firstinspires.ftc.teamcode.test.TeamCode-mergeDebugAndroidTestResources-3 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+org.firstinspires.ftc.teamcode.test.TeamCode-merged_res-4 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\build\intermediates\merged_res\debugAndroidTest
+org.firstinspires.ftc.teamcode.test.TeamCode-androidTest-5 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\src\androidTest\res
+org.firstinspires.ftc.teamcode.test.TeamCode-androidTestDebug-6 C:\Users\FTC\Desktop\FTC\PowerPlay\TeamCode\src\androidTestDebug\res
